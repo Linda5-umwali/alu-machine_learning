@@ -1,2 +1,1 @@
-# alu-machine_learning
-Linear Algebra
+Combined projects from intranet.
