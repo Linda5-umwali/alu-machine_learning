@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 """
-    Numpy Elementwise
+    Transposing matrices
 """
 
 
-def np_elementwise(mat1, mat2):
+def np_transpose(matrix):
     """
-    Performs element-wise addition, subtraction, multiplication, and division.
+    Return the transpose of a numpy matrix.
     """
-    add = mat1 + mat2
-    sub = mat1 - mat2
-    mul = mat1 * mat2
-    div = mat1 / mat2
-    return (add, sub, mul, div)
+    return matrix.T
