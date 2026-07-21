@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
-"""Module that defines add_arrays"""
+"""
+A function that adds two arrays element-wise.
+"""
 
 
 def add_arrays(arr1, arr2):
-    """Adds two arrays element-wise"""
+    """
+    Return the sum of two arrays.
+    """
+    # check if the array is not of the same shape
     if len(arr1) != len(arr2):
         return None
-    return [arr1[i] + arr2[i] for i in range(len(arr1))]
+    # loop through the array and add the elements
+    new_array = []
+    for i in range(len(arr1)):
+        sum = arr1[i] + arr2[i]
+        new_array.append(sum)
+    return new_array

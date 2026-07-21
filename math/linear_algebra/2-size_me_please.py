@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
-"""Module that defines matrix_shape"""
+"""
+A functin that returns the shape of a matrix
+"""
 
 
 def matrix_shape(matrix):
-    """Returns the shape of a matrix"""
+    """
+    Returns:
+    list: A list representing the shape of the matrix, where each element
+          corresponds to the size of each dimension.
+    """
     shape = []
-    while type(matrix) is list:
+    while isinstance(matrix, list):
         shape.append(len(matrix))
+        if len(matrix) == 0:
+            break
         matrix = matrix[0]
     return shape

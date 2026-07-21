@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Module that defines matrix_transpose"""
+"""
+Module that defines matrix_transpose
+"""
 
 
 def matrix_transpose(matrix):
