@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-    A function that calculates the minor of a matrix
+    A function that computes | calculate the cofacort
 """
 
 
-def minor(matrix):
+def cofactor(matrix):
     """
-    Returns the minor of matrix
+    Returns a matrix
     """
     if not isinstance(matrix, list) or len(matrix) == 0\
        or not all(isinstance(row, list) for row in matrix):
@@ -33,11 +33,13 @@ def minor(matrix):
     if n == 1:
         return [[1]]
 
-    minor_matrix = []
+    cofactor_matrix = []
     for i in range(n):
-        minor_row = []
+        cofactor_row = []
         for j in range(n):
-            minor_row.append(determinant(submatrix(matrix, i, j)))
-        minor_matrix.append(minor_row)
+            sign = (-1) ** (i + j)
+            minor = determinant(submatrix(matrix, i, j))
+            cofactor_row.append(sign * minor)
+        cofactor_matrix.append(cofactor_row)
 
-    return minor_matrix
+    return cofactor_matrix
